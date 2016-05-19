@@ -45,9 +45,11 @@ namespace XamarinWorkshopLab1.WinPhone
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
-            Button.Click += delegate {
-                var title = string.Format("{0} clicks!", count++);
-                Button.Content = title;
+            Button.Click += async delegate {
+
+                MyClass myClass = new MyClass();
+                tbWeather.Text = await myClass.GetWeather();
+                tbDevice.Text = myClass.GetDevice();
             };
 
             

@@ -34,7 +34,7 @@ namespace XamarinWorkshopLab1
             return $"{UIKit.UIDevice.CurrentDevice.Name} {UIKit.UIDevice.CurrentDevice.Model}";
 #elif WINDOWS_PHONE_APP
             Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation deviceInfo = new Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation();
-            return $"{deviceInfo.SystemManufacturer} {deviceInfo.FriendlyName}; 
+            return $"{deviceInfo.SystemManufacturer} {deviceInfo.FriendlyName}"; 
 #endif
         }
     }
