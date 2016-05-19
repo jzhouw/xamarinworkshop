@@ -17,9 +17,12 @@ namespace XamarinWorkshopLab1.iOS
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			Button.AccessibilityIdentifier = "myButton";
-			Button.TouchUpInside += delegate {
-				var title = string.Format ("{0} clicks!", count++);
-				Button.SetTitle (title, UIControlState.Normal);
+
+			Button.TouchUpInside += async delegate {
+
+                MyClass myClass = new MyClass();
+                LabelWeather.Text = await myClass.GetWeather();
+                LabelDevice.Text = myClass.GetDevice();
 			};
 
         }

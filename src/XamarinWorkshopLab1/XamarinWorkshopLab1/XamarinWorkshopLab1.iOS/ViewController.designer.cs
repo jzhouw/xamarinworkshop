@@ -26,6 +26,10 @@ namespace XamarinWorkshopLab1.iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel LabelLocation { get; set; }
 
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel LabelWeather { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
 			if (Button != null) {
@@ -39,6 +43,10 @@ namespace XamarinWorkshopLab1.iOS
 			if (LabelLocation != null) {
 				LabelLocation.Dispose ();
 				LabelLocation = null;
+			}
+			if (LabelWeather != null) {
+				LabelWeather.Dispose ();
+				LabelWeather = null;
 			}
 		}
 	}
