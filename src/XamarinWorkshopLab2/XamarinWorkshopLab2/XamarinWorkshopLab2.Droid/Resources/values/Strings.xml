@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="get">获取</string>
+  <string name="device_model">我的设备</string>
+  <string name="weather">当前天气</string>
+  <string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">XamarinWorkshopLab2.Droid</string>
+</resources>

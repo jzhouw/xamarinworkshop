@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="XamarinWorkshopLab1.WinPhone.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamarinWorkshopLab1.WinPhone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Button Content="获取" x:Name="Button" />
+        <TextBlock x:Name="tbWeather" TextWrapping="Wrap" Text="当前天气" FontSize="21.333"/>
+        <TextBlock x:Name="tbDevice" TextWrapping="Wrap" Text="我的设备" FontSize="21.333"/>
+    </StackPanel>
+</Page>
