@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinWorkshopLab4.Page1">
+  
+  <StackLayout>
+    <Button Text="获取" Command="{Binding GetCommand}"/>
+    <Label Text="{Binding WeatherData}" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label Text="{Binding DeviceData}" VerticalOptions="Center" HorizontalOptions="Center" />
+  </StackLayout>
+  
+</ContentPage>
