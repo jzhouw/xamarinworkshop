@@ -26,6 +26,20 @@ namespace XamarinWorkshopLab4
         //    }
         //}
 
+        private string _city;
+        public string City
+        {
+            get
+            {
+                return _city;
+            }
+            set
+            {
+                _city = value;
+                OnPropertyChanged("City");
+            }
+        }
+
         private string _weatherData;
         public string WeatherData
         {
@@ -52,20 +66,20 @@ namespace XamarinWorkshopLab4
 
         public Page1ViewModel()
         {
+            City = "Beijing";
             GetCommand = new Xamarin.Forms.Command(GetData);
         }
 
         private async void GetData()
         {
-            WeatherData = await GetWeather();
+            WeatherData = await GetWeather(City);
 
             DeviceData = $"{Plugin.DeviceInfo.CrossDeviceInfo.Current.Platform} {Plugin.DeviceInfo.CrossDeviceInfo.Current.Model}";
         }
 
-        public async System.Threading.Tasks.Task<string> GetWeather()
+        public async System.Threading.Tasks.Task<string> GetWeather(string city)
         {
-            string city = "beijing";
-
+           
             //如下代码需要Internet网络
             string apiKey = "1f05b04d2ec44ac5f74dffe877e4234d"; //http://openweathermap.org/api
             string apiUrl = $"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&APPID={apiKey}";
