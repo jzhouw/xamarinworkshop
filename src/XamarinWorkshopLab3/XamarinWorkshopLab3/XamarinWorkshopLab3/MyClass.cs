@@ -9,10 +9,8 @@ namespace XamarinWorkshopLab3
             
         }
 
-        public async System.Threading.Tasks.Task<string> GetWeather()
+        public async System.Threading.Tasks.Task<string> GetWeather(string city)
         {
-            string city = "beijing";
-
             //如下代码需要Internet网络
             string apiKey = "1f05b04d2ec44ac5f74dffe877e4234d"; //http://openweathermap.org/api
             string apiUrl = $"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&APPID={apiKey}";
